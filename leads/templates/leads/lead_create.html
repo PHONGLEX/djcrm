@@ -27,12 +27,13 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <a href="/leads">Go back to leads</a>
+        <a href="{% url 'leads:lead_list' %}">Go back to leads</a>
         <h1>Create a new lead</h1>
 
         <form action="." method="post">
             {% csrf_token %}
             {{form.as_p}}
+            <button type="submit">Submit</button>
         </form>        
     </body>
 </html>
